@@ -39,7 +39,7 @@ typedef struct pf_context {
         uint32_t driver_id;
         void *driver_ctx;
         bool active;
-    } drivers[256];
+    } drivers[PF_MAX_DRIVERS];
     uint32_t driver_count;
 } pf_context_t;
 
@@ -409,7 +409,7 @@ int pf_nat_translate(const char *src_addr, char *dst_addr) {
     for (uint32_t i = 0; i < g_pf_ctx.rule_count; i++) {
         pf_rule_t *rule = g_pf_ctx.rules[i];
         if (rule && (rule->flags & PF_FLAG_ENABLED) && (rule->flags & PF_FLAG_NAT)) {
-            if (strcmp(rule->src_addr, src_addr) == 0 || strcmp(rule->src_addr, "0.0.0.0") == 0) {
+            if (strcmp(rule->src_addr, src_addr) == 0 || strcmp(rule->src_addr, PF_ADDR_ANY) == 0) {
                 strncpy(dst_addr, rule->dst_addr, PF_MAX_ADDR_LEN - 1);
                 dst_addr[PF_MAX_ADDR_LEN - 1] = '\0';
                 pthread_mutex_unlock(&g_pf_ctx.lock);
@@ -460,9 +460,11 @@ int pf_upnp_add_mapping(uint16_t external_port, uint16_t internal_port,
     /* Create a rule for UPnP mapping */
     pf_rule_t rule = {0};
     snprintf(rule.name, PF_MAX_NAME_LEN, "upnp_%u_%u", external_port, internal_port);
-    strncpy(rule.src_addr, "0.0.0.0", PF_MAX_ADDR_LEN);
+    strncpy(rule.src_addr, PF_ADDR_ANY, PF_MAX_ADDR_LEN - 1);
+    rule.src_addr[PF_MAX_ADDR_LEN - 1] = '\0';
     rule.src_port = external_port;
-    strncpy(rule.dst_addr, "127.0.0.1", PF_MAX_ADDR_LEN);
+    strncpy(rule.dst_addr, PF_ADDR_LOCALHOST, PF_MAX_ADDR_LEN - 1);
+    rule.dst_addr[PF_MAX_ADDR_LEN - 1] = '\0';
     rule.dst_port = internal_port;
     rule.protocol = protocol;
     rule.flags = PF_FLAG_ENABLED | PF_FLAG_UPNP;
@@ -506,7 +508,7 @@ int pf_driver_register(uint32_t driver_id, void *driver_ctx) {
     pthread_mutex_lock(&g_pf_ctx.lock);
     
     /* Find free slot */
-    for (uint32_t i = 0; i < 256; i++) {
+    for (uint32_t i = 0; i < PF_MAX_DRIVERS; i++) {
         if (!g_pf_ctx.drivers[i].active) {
             g_pf_ctx.drivers[i].driver_id = driver_id;
             g_pf_ctx.drivers[i].driver_ctx = driver_ctx;
@@ -528,7 +530,7 @@ int pf_driver_unregister(uint32_t driver_id) {
     
     pthread_mutex_lock(&g_pf_ctx.lock);
     
-    for (uint32_t i = 0; i < 256; i++) {
+    for (uint32_t i = 0; i < PF_MAX_DRIVERS; i++) {
         if (g_pf_ctx.drivers[i].active && g_pf_ctx.drivers[i].driver_id == driver_id) {
             g_pf_ctx.drivers[i].active = false;
             g_pf_ctx.drivers[i].driver_id = 0;
@@ -556,7 +558,7 @@ int pf_driver_forward_packet(uint32_t driver_id, const uint8_t *packet, size_t l
     
     /* Verify driver is registered */
     bool found = false;
-    for (uint32_t i = 0; i < 256; i++) {
+    for (uint32_t i = 0; i < PF_MAX_DRIVERS; i++) {
         if (g_pf_ctx.drivers[i].active && g_pf_ctx.drivers[i].driver_id == driver_id) {
             found = true;
             break;

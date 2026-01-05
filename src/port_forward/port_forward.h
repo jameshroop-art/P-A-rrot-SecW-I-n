@@ -33,6 +33,11 @@ typedef enum {
 #define PF_MAX_RULES        1024
 #define PF_MAX_NAME_LEN     64
 #define PF_MAX_ADDR_LEN     46  /* IPv6 address string length */
+#define PF_MAX_DRIVERS      256 /* Maximum number of registered drivers */
+
+/* Special address constants */
+#define PF_ADDR_ANY         "0.0.0.0"
+#define PF_ADDR_LOCALHOST   "127.0.0.1"
 
 /* Port forwarding rule structure */
 typedef struct pf_rule {
