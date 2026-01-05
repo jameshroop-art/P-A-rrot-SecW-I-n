@@ -1,0 +1,96 @@
+# Build artifacts
+*.o
+*.ko
+*.so
+*.a
+*.mod
+*.mod.c
+*.cmd
+.tmp_versions/
+Module.symvers
+modules.order
+
+# Compiled binaries
+parrot-driver-manager
+pe_loader_test
+tiny_ai_test
+driver_manager
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# AI model artifacts
+*.h5
+*.pb
+*.tflite
+*.onnx
+src/tiny_ai/inference/weights.h
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+.*.sw?
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+.project
+.cproject
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test output
+test_output/
+test_results/
+
+# Package files
+*.deb
+*.rpm
+*.tar.gz
+*.zip
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Coverage
+*.gcov
+*.gcda
+*.gcno
+coverage/
+
+# Kernel module build
+*.order
+*.symvers
+
+# Driver files (don't commit actual Windows drivers)
+*.sys
+*.dll
+*.inf.bak
+
+# Configuration overrides
+config/local.conf
+config/*.local
+
+# Hardware databases (too large, download separately)
+config/hardware_db/*.db.gz
