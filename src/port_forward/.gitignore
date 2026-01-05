@@ -1,5 +1,0 @@
-# Build artifacts
-*.o
-*.so
-*.a
-port_forward_test
