@@ -1,0 +1,6 @@
+# Build artifacts
+poc/*/usb_driver_loader
+poc/*/pnp_monitor
+*.o
+*.so
+*.a
