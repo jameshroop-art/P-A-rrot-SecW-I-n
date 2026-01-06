@@ -14,7 +14,7 @@ will proceed without using proprietary information.
 
 Yes, we can write our own custom kernels for processes! This document outlines the architecture and implementation approach for creating per-process custom kernel modules that can provide isolated, specialized kernel functionality for individual processes.
 
-The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation.
+The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation. Note: LLM is used here as a derivative of "Language Learning Models" (not "Large Language Models"), a newly assigned definition for the expressed purpose to fit in small places and learn to do tiny jobs.
 
 ## Concept
 

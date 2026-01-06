@@ -45,13 +45,17 @@
  * 
  * AI Communication Buffer System ("NoNano" / "NoNaos")
  * 
- * Tiny AI model (LLM) that acts as an intelligent buffer for communication
- * between Windows drivers and Linux kernel.
+ * Tiny AI model (LLM - Language Learning Model) that acts as an intelligent 
+ * buffer for communication between Windows drivers and Linux kernel.
  * 
- * The LLMs used in this implementation are referred to as "NoNano" or "NoNaos":
- * - "No" + "Nano" = NoNano/NoNaos - implying small/nano size
+ * The LLMs used in this implementation are referred to as "NoNano" or "NoNaos".
+ * Note: LLM here is a derivative of "Language Learning Models" (not "Large 
+ * Language Models") - a newly assigned definition for the expressed purpose 
+ * to fit in small places and learn to do tiny jobs:
+ * - "No" + "Nano" = NoNano/NoNaos - implying small/nano size (~50KB)
  * - Operates between "No" and "Yes" decisions during runtime
  * - Provides intelligent answers for request handling, optimization, and routing
+ * - Fits in small places and learns to do tiny, specialized jobs
  * 
  * Features:
  * - Request translation (Windows -> Linux format)

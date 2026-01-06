@@ -20,12 +20,18 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
 
 ### About "NoNano" / "NoNaos" LLM
 
-The LLMs (Large Language Models) used in this implementation are referred to as **"NoNano"** or **"NoNaos"**:
+The LLMs used in this implementation are referred to as **"NoNano"** or **"NoNaos"**.
 
-- **Terminology**: "No" + "Nano" = Small/nano-sized models
+**Note on LLM Definition**: In this context, LLM is used as a derivative of **"Language Learning Models"** 
+(not "Large Language Models") - a newly assigned definition for the expressed purpose to fit in small 
+places and learn to do tiny jobs. This terminology better reflects the nano-scale nature and specialized 
+learning capabilities of these models.
+
+- **Terminology**: "No" + "Nano" = Small/nano-sized models designed for tiny, specialized jobs
 - **Function**: Operates between "No" and "Yes" decisions during runtime
 - **Purpose**: Provides intelligent answers for request handling, routing, optimization, and error prevention
-- **Size**: Nano-scale (~50KB), hence the name
+- **Size**: Nano-scale (~50KB), hence the name - fits in small places
+- **Learning**: Learns to do tiny, specialized jobs rather than general-purpose tasks
 - **Operation**: Makes binary-style decisions (accept/reject, optimize/defer) with nuanced intelligence
 
 ## The Working Theory

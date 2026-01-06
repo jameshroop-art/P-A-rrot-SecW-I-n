@@ -45,12 +45,14 @@
  * 
  * AI Communication Buffer Implementation ("NoNano" / "NoNaos" LLM)
  * 
- * Implements a tiny neural network (LLM) for intelligent request handling
- * between Windows drivers and Linux kernel.
+ * Implements a tiny neural network (LLM - Language Learning Model) for 
+ * intelligent request handling between Windows drivers and Linux kernel.
  * 
  * The "NoNano" or "NoNaos" LLM operates between "No" and "Yes" decisions,
  * providing intelligent answers during operation for request routing,
- * optimization, and error handling.
+ * optimization, and error handling. LLM here is used as a derivative of
+ * "Language Learning Models" - designed to fit in small places and learn
+ * to do tiny, specialized jobs.
  */
 
 #include "ai_buffer.h"
