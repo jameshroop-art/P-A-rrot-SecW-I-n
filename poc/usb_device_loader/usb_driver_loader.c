@@ -1,4 +1,33 @@
 /*
+ * ParrotWinKernel - Proof of Concept: Minimal Windows USB Driver Loader
+ * 
+ * Copyright (c) 2026 James Hroop. All Rights Reserved.
+ * 
+ * CREATIVE PROPERTY NOTICE:
+ * This work, including its IMPLEMENTATION, ARCHITECTURE, DESIGN, and SOLUTION,
+ * is the creative property and original intellectual work of James Hroop.
+ * 
+ * While individual code segments may reference publicly available specifications
+ * or reverse-engineered interfaces, the creative expression, methodology,
+ * and integrated solution are entirely original and protected works.
+ * 
+ * NO OWNERSHIP CLAIM is made over:
+ * - Public specifications (Windows API, Linux kernel interfaces)
+ * - Standard algorithms or publicly known techniques
+ * - Third-party code or libraries used
+ * 
+ * This file is part of ParrotWinKernel, a Windows driver compatibility
+ * layer for Linux with AI-assisted communication buffering.
+ * 
+ * Permission to use, copy, modify, and distribute this software is
+ * granted under the terms specified in the LICENSE file in the root
+ * directory of this project.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+ * See LICENSE file for full terms and conditions.
+ * 
+ * ---
+ * 
  * Proof of Concept: Minimal Windows USB Driver Loader
  * 
  * This demonstrates the core concept of loading a Windows .sys driver
