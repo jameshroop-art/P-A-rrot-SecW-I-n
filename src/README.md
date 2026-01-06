@@ -164,6 +164,10 @@ Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent d
 - **Network Isolation**: NoNanos operate in network-isolated mode by default
 - Complete privacy: your data, your patterns, your machine only
 - **THIS IS A CORE PRINCIPLE** - not optional, not configurable to allow external telemetry
+- **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to
+- **NO DATA COLLECTION** without explicit user consent
+- **USER OWNS ALL DATA**: All learning patterns, cache data, and operational data belong to the user
+- Zero data collection by default - user must explicitly opt-in for any local data retention
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 

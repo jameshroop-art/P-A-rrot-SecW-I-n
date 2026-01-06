@@ -37,7 +37,7 @@ The NoNano/NoNaos instances serve a specific, limited purpose:
 
 **Cache Security**: Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent data leaks**. Dumps are **staggered** so they never occur at the same time, avoiding performance spikes while ensuring no residual data from operations remains in memory and maintaining clean boundaries to prevent any potential leakage of proprietary information through the translation layer.
 
-**Privacy Policy**: **NON-NEGOTIABLE: ABSOLUTELY NO TELEMETRY** outside of localhost. All NoNano operations are strictly local with no external data transmission - EVER. User policy control enforces network isolation by default. This is a core architectural principle.
+**Privacy Policy**: **NON-NEGOTIABLE: ABSOLUTELY NO TELEMETRY** outside of localhost. All NoNano operations are strictly local with no external data transmission - EVER. User policy control enforces network isolation by default. This is a core architectural principle. **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to - no data collection without explicit user consent.
 
 ## Concept
 

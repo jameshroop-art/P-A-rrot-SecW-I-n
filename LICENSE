@@ -106,6 +106,9 @@ definition for the expressed purpose to fit in small places and learn to do tiny
 - **PRIVACY (NON-NEGOTIABLE)**: Absolutely NO telemetry outside of localhost per user policy - 
   all operations are strictly local with no external data transmission EVER, network isolation 
   enforced by default, this is a core architectural principle not subject to configuration
+- **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to - 
+  no data collection without explicit user consent, user owns all data including learning 
+  patterns and operational data, zero data collection by default
 - Architecture incorporates approximately 500 NoNano/NoNaos instances for comprehensive 
   driver and device coverage (~25MB total memory footprint for all LLMs)
 - Scale enables each instance to operate minimally and balance the system when under load
