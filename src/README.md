@@ -260,10 +260,25 @@ See LICENSE file. This code is meant to be used, modified, and shared to help ot
 - **Legal Compliance**: Once translated, data represents our implementation, not 
   proprietary third-party information
 
+**Hardware Control Signals vs Data Transfer**:
+
+A critical distinction: Sending hardware control signals is NOT proprietary data transfer.
+
+- **Control Commands Are Standard**: Commands like "enable GPU", "disable GPU", or 
+  boolean control signals (on/off/execute) are standard operating practice across 
+  the industry:
+  * CUDA → NVIDIA drivers
+  * DirectX/Vulkan → GPU drivers
+  * TensorFlow → TPU/GPU drivers
+
+- **What Hardware Receives**: Only control commands, not your algorithms or business logic
+- **Analogy**: Like a light switch - flipping it doesn't reveal how the bulb works
+
 **What we're allowed to build**: We can build kernel compatibility layers as long 
 as NO proprietary data is directly transferred. Our translation layer ensures that 
 by the time information reaches the other kernel, it's been transformed into a 
-non-proprietary format through our original implementation.
+non-proprietary format through our original implementation. Sending control signals 
+to hardware is standard practice and does not constitute proprietary data transfer.
 
 ---
 

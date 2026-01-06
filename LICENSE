@@ -47,6 +47,35 @@ data is transferred between kernel boundaries:
 - **Legal Boundary**: Once data is translated/transformed, it represents our 
   original implementation, not proprietary third-party information
 
+**HARDWARE CONTROL VS DATA TRANSFER**:
+
+It is important to distinguish between hardware control signals and proprietary 
+data transfer:
+
+- **Control Signals Are NOT Proprietary**: Sending commands like "enable GPU", 
+  "disable GPU", or control signals (on/off/execute) does not transfer proprietary 
+  information. This is analogous to pressing a light switch - it doesn't reveal 
+  how the light bulb works.
+
+- **Standard Operating Practice**: This is exactly how every major system works:
+  * CUDA kernels send commands to NVIDIA drivers
+  * DirectX/Vulkan abstract game engines send draw commands
+  * TensorFlow sends compute signals to TPU/GPU drivers
+
+- **What Cannot Be Protected** (and thus cannot be violated):
+  * Hardware control signals
+  * Standard driver interfaces
+  * Boolean enable/disable flags
+  * Standard API calls
+
+- **What CAN Be Protected**:
+  * The algorithm that decides when to send those signals
+  * The data being processed
+  * The business logic
+
+The driver receiving control signals never sees your algorithm, your data, or 
+your business logic - only the control commands. Hardware control ≠ Data transfer.
+
 This approach ensures we can build kernel compatibility layers without 
 transferring or using proprietary information.
 
