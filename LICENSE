@@ -91,10 +91,12 @@ The **Expression** encompasses:
 **"NoNano"** or **"NoNaos"**. In this context, LLM is used as a derivative of 
 "Language Learning Models" (rather than "Large Language Models") - a newly assigned 
 definition for the expressed purpose to fit in small places and learn to do tiny jobs:
-- "No" + "Nano" implies their small/nano size (~50KB)
+- "No" + "Nano" implies their small/nano size (~50KB per instance)
 - Refers to answers they apply during operation between "No" and "Yes"
 - Provides intelligent decision-making for request handling and routing
 - Designed to fit in small places and learn to do tiny, specialized jobs
+- Architecture incorporates approximately 200 NoNano/NoNaos instances for comprehensive 
+  driver and device coverage (~10MB total memory footprint for all LLMs)
 
 ## TERMS AND CONDITIONS
 

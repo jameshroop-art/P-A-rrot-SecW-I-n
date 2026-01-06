@@ -23,6 +23,8 @@ Yes, we can write our own custom kernels for processes! This document outlines t
 
 The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation. Note: LLM is used here as a derivative of "Language Learning Models" (not "Large Language Models"), a newly assigned definition for the expressed purpose to fit in small places and learn to do tiny jobs.
 
+**Multi-Instance Architecture**: The system architecture incorporates approximately **200 NoNano/NoNaos instances** for comprehensive coverage. Each ~50KB instance is specialized for specific device types, driver categories, or kernel operations, with a total memory footprint of approximately 10MB for all LLMs combined.
+
 ## Concept
 
 Instead of relying solely on the main Linux kernel and the Windows compatibility bridge, we can create **per-process kernel modules** that provide:

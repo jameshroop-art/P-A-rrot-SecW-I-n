@@ -102,9 +102,17 @@ The LLMs used are referred to as **"NoNano"** or **"NoNaos"**:
 - **Output**: Decision (pass-through, batch, optimize, defer, reject)
 - **Learning**: Online learning from actual outcomes
 - **Size**: ~50KB model file (nano-sized)
+- **Scalability**: Architecture designed to support approximately 200 NoNano/NoNaos instances for comprehensive driver and device coverage
 
 **Why AI (NoNano/NoNaos)?**
 Traditional translation is rigid. The NoNano/NoNaos LLM learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it, intelligently deciding between "No" (reject/defer) and "Yes" (accept/optimize) for each request.
+
+**Multi-Instance Architecture:**
+The system is designed to incorporate approximately **200 NoNano/NoNaos instances**, with each instance specialized for specific device types, driver categories, or kernel operations. This distributed approach ensures:
+- Specialized learning for different hardware types
+- Parallel processing capabilities
+- Fault isolation (one instance failure doesn't affect others)
+- Total memory footprint: ~200 instances × 50KB = ~10MB for all LLMs
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 
