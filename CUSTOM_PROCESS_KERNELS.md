@@ -23,9 +23,9 @@ Yes, we can write our own custom kernels for processes! This document outlines t
 
 The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation. Note: LLM is used here as a derivative of "Language Learning Models" (not "Large Language Models"), a newly assigned definition for the expressed purpose to fit in small places and learn to do tiny jobs.
 
-**Multi-Instance Architecture**: The system architecture incorporates approximately **200 NoNano/NoNaos instances** for comprehensive coverage. Each ~50KB instance is specialized for specific device types, driver categories, or kernel operations, with a total memory footprint of approximately 10MB for all LLMs combined.
+**Multi-Instance Architecture**: The system architecture incorporates approximately **250 NoNano/NoNaos instances** for comprehensive coverage. Each ~50KB instance is specialized for specific device types, driver categories, or kernel operations, with a total memory footprint of approximately 12.5MB for all LLMs combined.
 
-**Cache Security**: Each NoNano/NoNaos instance will **dump cache frequently to prevent data leaks**. This ensures no residual data from operations remains in memory, maintaining clean boundaries and preventing any potential leakage of proprietary information through the translation layer.
+**Cache Security**: Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent data leaks**. Dumps are **staggered** so they never occur at the same time, avoiding performance spikes while ensuring no residual data from operations remains in memory and maintaining clean boundaries to prevent any potential leakage of proprietary information through the translation layer.
 
 ## Concept
 

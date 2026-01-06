@@ -46,9 +46,10 @@ data is transferred between kernel boundaries:
   are original creative expressions
 - **Legal Boundary**: Once data is translated/transformed, it represents our 
   original implementation, not proprietary third-party information
-- **Cache Purging Security**: Each NoNano/NoNaos instance dumps cache frequently 
-  to prevent data leaks, ensuring no residual data from operations remains in 
-  memory that could potentially leak proprietary information
+- **Cache Purging Security**: Each NoNano/NoNaos instance dumps cache at periodic 
+  intervals to prevent data leaks, with staggered scheduling so dumps never occur 
+  at the same time (avoiding performance spikes), ensuring no residual data from 
+  operations remains in memory that could potentially leak proprietary information
 
 **HARDWARE CONTROL VS DATA TRANSFER**:
 
@@ -98,10 +99,12 @@ definition for the expressed purpose to fit in small places and learn to do tiny
 - Refers to answers they apply during operation between "No" and "Yes"
 - Provides intelligent decision-making for request handling and routing
 - Designed to fit in small places and learn to do tiny, specialized jobs
-- Architecture incorporates approximately 200 NoNano/NoNaos instances for comprehensive 
-  driver and device coverage (~10MB total memory footprint for all LLMs)
-- Each instance dumps cache frequently to prevent data leaks, ensuring no residual 
-  data remains in memory that could potentially leak proprietary information
+- Architecture incorporates approximately 250 NoNano/NoNaos instances for comprehensive 
+  driver and device coverage (~12.5MB total memory footprint for all LLMs)
+- Each instance dumps cache at periodic intervals to prevent data leaks, with staggered 
+  scheduling ensuring dumps never occur at the same time (avoiding performance spikes 
+  while ensuring no residual data remains in memory that could potentially leak 
+  proprietary information)
 
 ## TERMS AND CONDITIONS
 
