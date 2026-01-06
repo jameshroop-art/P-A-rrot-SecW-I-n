@@ -1,11 +1,13 @@
 /*
  * ParrotWinKernel - Kernel Bridge: Windows-Linux Hybrid Communication Layer
  * 
- * Copyright (c) 2026 James Hroop. All Rights Reserved.
+ * Copyright (c) 2026 James H Roop. All Rights Reserved.
  * 
- * CREATIVE PROPERTY NOTICE:
- * This work, including its IMPLEMENTATION, ARCHITECTURE, DESIGN, and SOLUTION,
- * is the creative property and original intellectual work of James Hroop.
+ * EXPRESSION OF CREATIVE WORK:
+ * This work embodies the Expression of James H Roop's original plan and theory 
+ * of implementation. The creative intellectual property includes the IMPLEMENTATION, 
+ * ARCHITECTURE, DESIGN, and SOLUTION as the creative Expression of the plan and 
+ * theoretical framework.
  * 
  * While individual code segments may reference publicly available specifications
  * or reverse-engineered interfaces, the creative expression, methodology,

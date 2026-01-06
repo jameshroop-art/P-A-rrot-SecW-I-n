@@ -1,6 +1,21 @@
 # PROPRIETARY SOFTWARE LICENSE
 
-Copyright (c) 2026 James Hroop (jameshroop-art). All Rights Reserved.
+Copyright (c) 2026 James H Roop (jameshroop-art). All Rights Reserved.
+
+## EXPRESSION OF CREATIVE WORK
+
+This software embodies the **Expression** of James H Roop's original plan and 
+theory of implementation. The creative intellectual property protected herein 
+includes not only the executable code, but the conceptual framework, architectural 
+design, implementation methodology, and the theoretical foundation upon which 
+this system is built.
+
+The **Expression** encompasses:
+- The original concept and vision for cross-kernel driver compatibility
+- The theoretical framework for Windows-Linux driver bridging
+- The architectural design and implementation strategy
+- The novel methodologies and approaches developed herein
+- The integration patterns and technical solutions expressed in this work
 
 ## TERMS AND CONDITIONS
 
@@ -160,7 +175,7 @@ UNDERSTOOD THIS LICENSE AND AGREE TO BE BOUND BY ITS TERMS.**
 ---
 
 **Project Start Date:** January 5, 2026  
-**Copyright Holder:** James Hroop (@jameshroop-art)  
-**License Version:** 1.0
+**Copyright Holder:** James H Roop (@jameshroop-art)  
+**License Version:** 1.1
 
 For questions about licensing, contact the repository owner.
