@@ -249,6 +249,22 @@ This is community-driven. Contribute via:
 
 See LICENSE file. This code is meant to be used, modified, and shared to help others.
 
+### Data Translation and Legal Boundaries
+
+**Important**: This project is designed with clear legal boundaries:
+
+- **No Proprietary Data Transfer**: Information is TRANSLATED, not transferred
+- **Clean Transformation**: Data passing between kernels is transformed through our 
+  original NoNano/NoNaos LLM layer and kernel bridge
+- **Original Expression**: The translation methodology is our creative expression
+- **Legal Compliance**: Once translated, data represents our implementation, not 
+  proprietary third-party information
+
+**What we're allowed to build**: We can build kernel compatibility layers as long 
+as NO proprietary data is directly transferred. Our translation layer ensures that 
+by the time information reaches the other kernel, it's been transformed into a 
+non-proprietary format through our original implementation.
+
 ---
 
 **Remember**: We're not doing this for money or recognition. We're doing this because it needs to be done. Because people need it. Because the world needs it.

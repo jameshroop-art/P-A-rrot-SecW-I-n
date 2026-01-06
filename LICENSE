@@ -31,6 +31,25 @@ will continue WITHOUT using any proprietary information from the above-mentioned
 entities or any other third parties. This project will remain based solely on 
 simulation, public specifications, and original creative work.
 
+**DATA TRANSLATION AND KERNEL BOUNDARIES**: 
+
+This project's architecture is specifically designed to ensure NO proprietary 
+data is transferred between kernel boundaries:
+
+- **Translation Layer**: All data passing between kernel spaces is TRANSLATED 
+  through the NoNano/NoNaos LLM layer and kernel bridge
+- **Clean Transformation**: By the time information reaches the other kernel, 
+  it has been transformed into a new, non-proprietary format
+- **No Direct Transfer**: No proprietary data structures, formats, or information 
+  passes directly between kernels
+- **Original Expression**: The translation methodology and transformation logic 
+  are original creative expressions
+- **Legal Boundary**: Once data is translated/transformed, it represents our 
+  original implementation, not proprietary third-party information
+
+This approach ensures we can build kernel compatibility layers without 
+transferring or using proprietary information.
+
 The **Expression** encompasses:
 - The original concept and vision for cross-kernel driver compatibility
 - The theoretical framework for Windows-Linux driver bridging

@@ -8,6 +8,13 @@ other entities. Everything described herein is **SIMULATED** based on publicly
 available specifications and original creative expression. All future development 
 will proceed without using proprietary information.
 
+**DATA TRANSLATION BOUNDARY**: When building custom kernels, NO proprietary data 
+is transferred between kernel boundaries. All data is TRANSLATED through the 
+NoNano/NoNaos LLM layer. By the time information reaches another kernel, it has 
+been transformed into non-proprietary format through our original translation 
+methodology. This ensures legal compliance - translated data represents our 
+implementation, not proprietary third-party information.
+
 ---
 
 ## Overview
