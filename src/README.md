@@ -168,6 +168,12 @@ Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent d
 - **NO DATA COLLECTION** without explicit user consent
 - **USER OWNS ALL DATA**: All learning patterns, cache data, and operational data belong to the user
 - Zero data collection by default - user must explicitly opt-in for any local data retention
+- **USERS CANNOT BE BULLIED OUT OF THEIR DATA**: No dark patterns, no forced consent, no 
+  "accept or the software won't work" tactics - the system works fully without any data collection
+- **NO COERCION**: Software operates at full functionality with zero data sharing
+- **TRUE CHOICE**: Users have genuine control, not manufactured consent
+- **USER'S TERMS**: Users can provide their data as they see fit - on their timeline, in their 
+  format, to parties of their choosing, with full control over what is shared and when
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 

@@ -109,6 +109,11 @@ definition for the expressed purpose to fit in small places and learn to do tiny
 - **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to - 
   no data collection without explicit user consent, user owns all data including learning 
   patterns and operational data, zero data collection by default
+- **NO COERCION**: Users cannot be bullied out of their data - no dark patterns, no forced 
+  consent, no "accept or it won't work" tactics, software operates at full functionality 
+  with zero data sharing, true user choice not manufactured consent
+- **USER'S TERMS**: Users can provide their data as they see fit - on their timeline, in 
+  their format, to parties of their choosing, with full control over what is shared and when
 - Architecture incorporates approximately 500 NoNano/NoNaos instances for comprehensive 
   driver and device coverage (~25MB total memory footprint for all LLMs)
 - Scale enables each instance to operate minimally and balance the system when under load
