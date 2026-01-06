@@ -25,6 +25,8 @@ The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - n
 
 **Multi-Instance Architecture**: The system architecture incorporates approximately **200 NoNano/NoNaos instances** for comprehensive coverage. Each ~50KB instance is specialized for specific device types, driver categories, or kernel operations, with a total memory footprint of approximately 10MB for all LLMs combined.
 
+**Cache Security**: Each NoNano/NoNaos instance will **dump cache frequently to prevent data leaks**. This ensures no residual data from operations remains in memory, maintaining clean boundaries and preventing any potential leakage of proprietary information through the translation layer.
+
 ## Concept
 
 Instead of relying solely on the main Linux kernel and the Windows compatibility bridge, we can create **per-process kernel modules** that provide:

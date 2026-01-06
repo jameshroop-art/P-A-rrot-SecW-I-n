@@ -114,6 +114,14 @@ The system is designed to incorporate approximately **200 NoNano/NoNaos instance
 - Fault isolation (one instance failure doesn't affect others)
 - Total memory footprint: ~200 instances × 50KB = ~10MB for all LLMs
 
+**Cache Management and Security:**
+Each NoNano/NoNaos instance will **dump cache frequently to prevent data leaks**. This critical security measure ensures:
+- No residual data from operations remains in memory
+- Prevents potential leakage of proprietary information
+- Maintains clean boundaries between translation operations
+- Regular cache purging after processing to eliminate any traces of source data
+- Zero-knowledge architecture: translated data doesn't retain source characteristics
+
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 
 Manages the translation layer between Windows and Linux:
