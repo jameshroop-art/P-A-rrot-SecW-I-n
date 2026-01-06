@@ -10,6 +10,12 @@ includes not only the executable code, but the conceptual framework, architectur
 design, implementation methodology, and the theoretical foundation upon which 
 this system is built.
 
+**IMPORTANT NOTICE**: No proprietary information from third parties (including 
+but not limited to Microsoft, hardware manufacturers, or other entities) was 
+used in the creation of this work. This work is based solely on publicly 
+available specifications, reverse-engineered interfaces, and original creative 
+expression.
+
 The **Expression** encompasses:
 - The original concept and vision for cross-kernel driver compatibility
 - The theoretical framework for Windows-Linux driver bridging

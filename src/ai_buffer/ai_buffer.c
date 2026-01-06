@@ -9,6 +9,11 @@
  * ARCHITECTURE, DESIGN, and SOLUTION as the creative Expression of the plan and 
  * theoretical framework.
  * 
+ * IMPORTANT NOTICE: No proprietary information from third parties (including 
+ * Microsoft, hardware manufacturers, or other entities) was used in the creation 
+ * of this work. This is based solely on publicly available specifications, 
+ * reverse-engineered interfaces, and original creative expression.
+ * 
  * While individual code segments may reference publicly available specifications
  * or reverse-engineered interfaces, the creative expression, methodology,
  * and integrated solution are entirely original and protected works.
