@@ -39,7 +39,7 @@ The **Expression** encompasses:
 - The integration patterns and technical solutions expressed in this work
 - The "NoNano" / "NoNaos" LLM terminology and implementation approach
 
-**LLM TERMINOLOGY**: The LLMs (Language Learning Models) used in detailed 
+**LLM TERMINOLOGY**: The LLMs (Large Language Models) used in detailed 
 implementation are referred to as **"NoNano"** or **"NoNaos"**:
 - "No" + "Nano" implies their small/nano size (~50KB)
 - Refers to answers they apply during operation between "No" and "Yes"
