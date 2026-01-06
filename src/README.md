@@ -14,9 +14,19 @@ We're not building this for profit or recognition. We're building it because:
 
 ParrotWinKernel is a **complete working theory** demonstrating how Windows device drivers (particularly chipset drivers) can operate on Linux through:
 
-1. **AI-Powered Communication Buffer**: A tiny neural network (~50KB) that intelligently manages communication between Windows driver calls and Linux kernel operations
+1. **AI-Powered Communication Buffer ("NoNano"/"NoNaos")**: A tiny neural network LLM (~50KB) that intelligently manages communication between Windows driver calls and Linux kernel operations
 2. **Kernel Bridge**: Translates between Windows and Linux kernel APIs in real-time
 3. **Chipset Driver Support**: Full support for processor chipsets from Intel, AMD, NVIDIA, and Qualcomm
+
+### About "NoNano" / "NoNaos" LLM
+
+The LLMs (Language Learning Models) used in this implementation are referred to as **"NoNano"** or **"NoNaos"**:
+
+- **Terminology**: "No" + "Nano" = Small/nano-sized models
+- **Function**: Operates between "No" and "Yes" decisions during runtime
+- **Purpose**: Provides intelligent answers for request handling, routing, optimization, and error prevention
+- **Size**: Nano-scale (~50KB), hence the name
+- **Operation**: Makes binary-style decisions (accept/reject, optimize/defer) with nuanced intelligence
 
 ## The Working Theory
 
@@ -27,10 +37,11 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
 - Chipsets require deep kernel integration
 
 ### Solution
-- **AI Buffer**: Learns optimal translation patterns
+- **AI Buffer (NoNano/NoNaos)**: Learns optimal translation patterns
 - **Smart Batching**: Groups related operations for efficiency
 - **Predictive Optimization**: Anticipates driver needs
 - **Failure Prevention**: Predicts and prevents errors before they happen
+- **Intelligent Decision-Making**: Operates between "No" and "Yes" for each request
 
 ### Architecture
 
@@ -42,11 +53,13 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
                    │
                    ↓ Windows API Calls
 ┌─────────────────────────────────────────────┐
-│          AI Communication Buffer             │
+│    AI Communication Buffer (NoNano/NoNaos)  │
+│        Nano-sized LLM (~50KB)               │
 │   • Learns patterns                         │
 │   • Optimizes requests                      │
 │   • Predicts failures                       │
 │   • Batches operations                      │
+│   • Decides between "No" and "Yes"          │
 └──────────────────┬──────────────────────────┘
                    │
                    ↓ Optimized Requests
@@ -68,18 +81,24 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
 
 ## Components
 
-### 1. AI Communication Buffer (`src/ai_buffer/`)
+### 1. AI Communication Buffer - "NoNano" / "NoNaos" LLM (`src/ai_buffer/`)
 
-A lightweight neural network that learns to optimize driver communication:
+A lightweight neural network (LLM) that learns to optimize driver communication.
 
+The LLMs used are referred to as **"NoNano"** or **"NoNaos"**:
+- **"No" + "Nano"** = Implies small/nano-sized models (~50KB)
+- **Operates between "No" and "Yes"** = Provides intelligent decision-making during operation
+- **Applies answers** during runtime for request handling, routing, and optimization
+
+**Model Characteristics:**
 - **Input**: Request features (type, device, size, timing)
 - **Processing**: 32-neuron hidden layer with ReLU activation
 - **Output**: Decision (pass-through, batch, optimize, defer, reject)
 - **Learning**: Online learning from actual outcomes
-- **Size**: ~50KB model file
+- **Size**: ~50KB model file (nano-sized)
 
-**Why AI?**
-Traditional translation is rigid. AI learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it.
+**Why AI (NoNano/NoNaos)?**
+Traditional translation is rigid. The NoNano/NoNaos LLM learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it, intelligently deciding between "No" (reject/defer) and "Yes" (accept/optimize) for each request.
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 

@@ -14,6 +14,8 @@ will proceed without using proprietary information.
 
 Yes, we can write our own custom kernels for processes! This document outlines the architecture and implementation approach for creating per-process custom kernel modules that can provide isolated, specialized kernel functionality for individual processes.
 
+The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation.
+
 ## Concept
 
 Instead of relying solely on the main Linux kernel and the Windows compatibility bridge, we can create **per-process kernel modules** that provide:
@@ -22,6 +24,7 @@ Instead of relying solely on the main Linux kernel and the Windows compatibility
 2. **Isolated execution environments** - Better security and stability
 3. **Custom system call interfaces** - Tailored APIs for specific applications
 4. **Independent resource management** - Per-process memory, I/O, and device handling
+5. **NoNano/NoNaos LLM integration** - Intelligent decision-making for each process kernel
 
 ## Architecture
 

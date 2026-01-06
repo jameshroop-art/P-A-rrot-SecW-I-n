@@ -43,16 +43,22 @@
  * 
  * ---
  * 
- * AI Communication Buffer System
+ * AI Communication Buffer System ("NoNano" / "NoNaos")
  * 
- * Tiny AI model that acts as an intelligent buffer for communication
+ * Tiny AI model (LLM) that acts as an intelligent buffer for communication
  * between Windows drivers and Linux kernel.
+ * 
+ * The LLMs used in this implementation are referred to as "NoNano" or "NoNaos":
+ * - "No" + "Nano" = NoNano/NoNaos - implying small/nano size
+ * - Operates between "No" and "Yes" decisions during runtime
+ * - Provides intelligent answers for request handling, optimization, and routing
  * 
  * Features:
  * - Request translation (Windows -> Linux format)
  * - Response optimization
  * - Error prediction and handling
  * - Performance tuning based on patterns
+ * - Decision-making between acceptance (Yes) and rejection (No)
  */
 
 #ifndef AI_BUFFER_H
