@@ -107,6 +107,34 @@ The LLMs used are referred to as **"NoNano"** or **"NoNaos"**:
 **Why AI (NoNano/NoNaos)?**
 Traditional translation is rigid. The NoNano/NoNaos LLM learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it, intelligently deciding between "No" (reject/defer) and "Yes" (accept/optimize) for each request.
 
+**NoNano Purpose: Hardware Balance & Optimization Only**
+
+**IMPORTANT**: The NoNano/NoNaos instances are **NOT** processing your data or running your applications. Their sole purpose is:
+
+1. **Hardware Balance**: Optimizing how requests are distributed across hardware resources
+2. **Load Optimization**: Intelligently routing operations to prevent bottlenecks
+3. **Decision Making**: Determining the most efficient path for each operation (defer/batch/execute)
+4. **Resource Management**: Balancing system resources for optimal performance
+
+**NoNanos work ON the system, not WITH your data.** They analyze patterns and make routing decisions - they never see, process, or store your actual application data.
+
+**Low-Budget Performance Increase**
+
+This architecture provides a **cost-effective way to increase processing power** without expensive hardware upgrades:
+
+- **Software-Based Optimization**: 500 tiny AI models (~25MB total) intelligently manage your existing hardware
+- **No Hardware Required**: Increases effective processing power through better resource utilization
+- **Multiplicative Effect**: Smart load balancing can effectively multiply your hardware's capabilities
+- **Progressive Learning**: System gets faster over time as NoNanos learn optimal patterns
+- **Budget-Friendly**: ~25MB of smart routing vs. thousands of dollars in new hardware
+
+**Performance Gains Without Hardware Costs:**
+- Better CPU/GPU utilization through intelligent scheduling
+- Reduced latency via predictive operation batching  
+- Fewer resource conflicts through smart load balancing
+- Elimination of processing bottlenecks
+- Hardware operates closer to theoretical maximum efficiency
+
 **Multi-Instance Architecture:**
 The system is designed to incorporate approximately **500 NoNano/NoNaos instances**, with each instance specialized for specific device types, driver categories, or kernel operations. This distributed approach ensures:
 - Specialized learning for different hardware types
@@ -126,6 +154,16 @@ Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent d
 - **Staggered Dumping**: Cache dumps are scheduled at different intervals for each instance, 
   ensuring they **never dump at the same time** to avoid performance spikes and maintain 
   consistent system responsiveness
+
+**Privacy & Telemetry Policy:**
+- **NON-NEGOTIABLE: ABSOLUTELY NO TELEMETRY** outside of localhost
+- All NoNano operations are **strictly local**
+- No data transmission to external servers - **EVER**
+- No analytics, metrics, or usage data leaves your machine
+- **User Policy Control**: Telemetry restrictions enforced by user-configurable policy
+- **Network Isolation**: NoNanos operate in network-isolated mode by default
+- Complete privacy: your data, your patterns, your machine only
+- **THIS IS A CORE PRINCIPLE** - not optional, not configurable to allow external telemetry
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 

@@ -23,9 +23,21 @@ Yes, we can write our own custom kernels for processes! This document outlines t
 
 The LLMs used in this system are referred to as **"NoNano"** or **"NoNaos"** - nano-sized models that operate between "No" and "Yes" decisions, providing intelligent answers during operation. Note: LLM is used here as a derivative of "Language Learning Models" (not "Large Language Models"), a newly assigned definition for the expressed purpose to fit in small places and learn to do tiny jobs.
 
+**NoNano Role: Hardware Balance & Optimization Only**
+
+The NoNano/NoNaos instances serve a specific, limited purpose:
+- **Hardware load balancing** and resource optimization
+- **Request routing decisions** (not data processing)
+- **Performance optimization** through intelligent scheduling
+- They work ON the system infrastructure, not WITH user data
+
+**Low-Budget Performance Enhancement**: This approach provides a cost-effective way to increase processing power without hardware upgrades. The 500 instances (~25MB total) intelligently manage existing hardware to achieve better utilization and effective performance multiplication.
+
 **Multi-Instance Architecture**: The system architecture incorporates approximately **500 NoNano/NoNaos instances** for comprehensive coverage. Each ~50KB instance is specialized for specific device types, driver categories, or kernel operations, with a total memory footprint of approximately 25MB for all LLMs combined. This scale enables each instance to operate minimally and balance the system effectively when under load.
 
 **Cache Security**: Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent data leaks**. Dumps are **staggered** so they never occur at the same time, avoiding performance spikes while ensuring no residual data from operations remains in memory and maintaining clean boundaries to prevent any potential leakage of proprietary information through the translation layer.
+
+**Privacy Policy**: **NON-NEGOTIABLE: ABSOLUTELY NO TELEMETRY** outside of localhost. All NoNano operations are strictly local with no external data transmission - EVER. User policy control enforces network isolation by default. This is a core architectural principle.
 
 ## Concept
 

@@ -99,6 +99,13 @@ definition for the expressed purpose to fit in small places and learn to do tiny
 - Refers to answers they apply during operation between "No" and "Yes"
 - Provides intelligent decision-making for request handling and routing
 - Designed to fit in small places and learn to do tiny, specialized jobs
+- **PURPOSE**: NoNanos work ON hardware balance and optimization, NOT data processing
+- **FUNCTION**: Hardware load balancing, request routing, and performance optimization only
+- **LOW-BUDGET PERFORMANCE**: Provides cost-effective processing power increase through 
+  intelligent resource management without requiring hardware upgrades
+- **PRIVACY (NON-NEGOTIABLE)**: Absolutely NO telemetry outside of localhost per user policy - 
+  all operations are strictly local with no external data transmission EVER, network isolation 
+  enforced by default, this is a core architectural principle not subject to configuration
 - Architecture incorporates approximately 500 NoNano/NoNaos instances for comprehensive 
   driver and device coverage (~25MB total memory footprint for all LLMs)
 - Scale enables each instance to operate minimally and balance the system when under load
