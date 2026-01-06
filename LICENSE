@@ -99,8 +99,9 @@ definition for the expressed purpose to fit in small places and learn to do tiny
 - Refers to answers they apply during operation between "No" and "Yes"
 - Provides intelligent decision-making for request handling and routing
 - Designed to fit in small places and learn to do tiny, specialized jobs
-- Architecture incorporates approximately 250 NoNano/NoNaos instances for comprehensive 
-  driver and device coverage (~12.5MB total memory footprint for all LLMs)
+- Architecture incorporates approximately 500 NoNano/NoNaos instances for comprehensive 
+  driver and device coverage (~25MB total memory footprint for all LLMs)
+- Scale enables each instance to operate minimally and balance the system when under load
 - Each instance dumps cache at periodic intervals to prevent data leaks, with staggered 
   scheduling ensuring dumps never occur at the same time (avoiding performance spikes 
   while ensuring no residual data remains in memory that could potentially leak 
