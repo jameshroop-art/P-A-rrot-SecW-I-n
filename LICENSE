@@ -10,11 +10,26 @@ includes not only the executable code, but the conceptual framework, architectur
 design, implementation methodology, and the theoretical foundation upon which 
 this system is built.
 
-**IMPORTANT NOTICE**: No proprietary information from third parties (including 
-but not limited to Microsoft, hardware manufacturers, or other entities) was 
-used in the creation of this work. This work is based solely on publicly 
-available specifications, reverse-engineered interfaces, and original creative 
-expression.
+**IMPORTANT NOTICE - NO PROPRIETARY INFORMATION USED**: 
+
+This work contains **NO** proprietary information from:
+- Microsoft Corporation (Windows, Windows APIs, Windows drivers)
+- Linux Foundation or Linux kernel developers
+- Debian Project
+- Parrot Security OS
+- Any hardware manufacturers
+- Any other third-party entities
+
+**EVERYTHING IS SIMULATED**: All functionality in this project is based on:
+- Simulated interfaces and behaviors
+- Publicly available documentation and specifications
+- Clean-room reverse engineering of publicly observable behavior
+- Original creative expression and theoretical implementation
+
+**FUTURE DEVELOPMENT**: All future tests, implementations, and development 
+will continue WITHOUT using any proprietary information from the above-mentioned 
+entities or any other third parties. This project will remain based solely on 
+simulation, public specifications, and original creative work.
 
 The **Expression** encompasses:
 - The original concept and vision for cross-kernel driver compatibility
