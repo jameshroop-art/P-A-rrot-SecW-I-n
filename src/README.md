@@ -14,9 +14,25 @@ We're not building this for profit or recognition. We're building it because:
 
 ParrotWinKernel is a **complete working theory** demonstrating how Windows device drivers (particularly chipset drivers) can operate on Linux through:
 
-1. **AI-Powered Communication Buffer**: A tiny neural network (~50KB) that intelligently manages communication between Windows driver calls and Linux kernel operations
+1. **AI-Powered Communication Buffer ("NoNano"/"NoNaos")**: A tiny neural network LLM (~50KB) that intelligently manages communication between Windows driver calls and Linux kernel operations
 2. **Kernel Bridge**: Translates between Windows and Linux kernel APIs in real-time
 3. **Chipset Driver Support**: Full support for processor chipsets from Intel, AMD, NVIDIA, and Qualcomm
+
+### About "NoNano" / "NoNaos" LLM
+
+The LLMs used in this implementation are referred to as **"NoNano"** or **"NoNaos"**.
+
+**Note on LLM Definition**: In this context, LLM is used as a derivative of **"Language Learning Models"** 
+(not "Large Language Models") - a newly assigned definition for the expressed purpose to fit in small 
+places and learn to do tiny jobs. This terminology better reflects the nano-scale nature and specialized 
+learning capabilities of these models.
+
+- **Terminology**: "No" + "Nano" = Small/nano-sized models designed for tiny, specialized jobs
+- **Function**: Operates between "No" and "Yes" decisions during runtime
+- **Purpose**: Provides intelligent answers for request handling, routing, optimization, and error prevention
+- **Size**: Nano-scale (~50KB), hence the name - fits in small places
+- **Learning**: Learns to do tiny, specialized jobs rather than general-purpose tasks
+- **Operation**: Makes binary-style decisions (accept/reject, optimize/defer) with nuanced intelligence
 
 ## The Working Theory
 
@@ -27,10 +43,11 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
 - Chipsets require deep kernel integration
 
 ### Solution
-- **AI Buffer**: Learns optimal translation patterns
+- **AI Buffer (NoNano/NoNaos)**: Learns optimal translation patterns
 - **Smart Batching**: Groups related operations for efficiency
 - **Predictive Optimization**: Anticipates driver needs
 - **Failure Prevention**: Predicts and prevents errors before they happen
+- **Intelligent Decision-Making**: Operates between "No" and "Yes" for each request
 
 ### Architecture
 
@@ -42,11 +59,13 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
                    │
                    ↓ Windows API Calls
 ┌─────────────────────────────────────────────┐
-│          AI Communication Buffer             │
+│    AI Communication Buffer (NoNano/NoNaos)  │
+│        Nano-sized LLM (~50KB)               │
 │   • Learns patterns                         │
 │   • Optimizes requests                      │
 │   • Predicts failures                       │
 │   • Batches operations                      │
+│   • Decides between "No" and "Yes"          │
 └──────────────────┬──────────────────────────┘
                    │
                    ↓ Optimized Requests
@@ -68,18 +87,93 @@ ParrotWinKernel is a **complete working theory** demonstrating how Windows devic
 
 ## Components
 
-### 1. AI Communication Buffer (`src/ai_buffer/`)
+### 1. AI Communication Buffer - "NoNano" / "NoNaos" LLM (`src/ai_buffer/`)
 
-A lightweight neural network that learns to optimize driver communication:
+A lightweight neural network (LLM) that learns to optimize driver communication.
 
+The LLMs used are referred to as **"NoNano"** or **"NoNaos"**:
+- **"No" + "Nano"** = Implies small/nano-sized models (~50KB)
+- **Operates between "No" and "Yes"** = Provides intelligent decision-making during operation
+- **Applies answers** during runtime for request handling, routing, and optimization
+
+**Model Characteristics:**
 - **Input**: Request features (type, device, size, timing)
 - **Processing**: 32-neuron hidden layer with ReLU activation
 - **Output**: Decision (pass-through, batch, optimize, defer, reject)
 - **Learning**: Online learning from actual outcomes
-- **Size**: ~50KB model file
+- **Size**: ~50KB model file (nano-sized)
+- **Scalability**: Architecture designed to support approximately 500 NoNano/NoNaos instances for comprehensive driver and device coverage
 
-**Why AI?**
-Traditional translation is rigid. AI learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it.
+**Why AI (NoNano/NoNaos)?**
+Traditional translation is rigid. The NoNano/NoNaos LLM learns the specific patterns of each chipset and optimizes over time. It gets **better** the more you use it, intelligently deciding between "No" (reject/defer) and "Yes" (accept/optimize) for each request.
+
+**NoNano Purpose: Hardware Balance & Optimization Only**
+
+**IMPORTANT**: The NoNano/NoNaos instances are **NOT** processing your data or running your applications. Their sole purpose is:
+
+1. **Hardware Balance**: Optimizing how requests are distributed across hardware resources
+2. **Load Optimization**: Intelligently routing operations to prevent bottlenecks
+3. **Decision Making**: Determining the most efficient path for each operation (defer/batch/execute)
+4. **Resource Management**: Balancing system resources for optimal performance
+
+**NoNanos work ON the system, not WITH your data.** They analyze patterns and make routing decisions - they never see, process, or store your actual application data.
+
+**Low-Budget Performance Increase**
+
+This architecture provides a **cost-effective way to increase processing power** without expensive hardware upgrades:
+
+- **Software-Based Optimization**: 500 tiny AI models (~25MB total) intelligently manage your existing hardware
+- **No Hardware Required**: Increases effective processing power through better resource utilization
+- **Multiplicative Effect**: Smart load balancing can effectively multiply your hardware's capabilities
+- **Progressive Learning**: System gets faster over time as NoNanos learn optimal patterns
+- **Budget-Friendly**: ~25MB of smart routing vs. thousands of dollars in new hardware
+
+**Performance Gains Without Hardware Costs:**
+- Better CPU/GPU utilization through intelligent scheduling
+- Reduced latency via predictive operation batching  
+- Fewer resource conflicts through smart load balancing
+- Elimination of processing bottlenecks
+- Hardware operates closer to theoretical maximum efficiency
+
+**Multi-Instance Architecture:**
+The system is designed to incorporate approximately **500 NoNano/NoNaos instances**, with each instance specialized for specific device types, driver categories, or kernel operations. This distributed approach ensures:
+- Specialized learning for different hardware types
+- Parallel processing capabilities
+- Fault isolation (one instance failure doesn't affect others)
+- Minimal load per instance - enables each instance to operate minimally even under system load
+- Superior load balancing across all instances
+- Total memory footprint: ~500 instances × 50KB = ~25MB for all LLMs
+
+**Cache Management and Security:**
+Each NoNano/NoNaos instance will **dump cache at periodic intervals to prevent data leaks**. This critical security measure ensures:
+- No residual data from operations remains in memory
+- Prevents potential leakage of proprietary information
+- Maintains clean boundaries between translation operations
+- Regular cache purging after processing to eliminate any traces of source data
+- Zero-knowledge architecture: translated data doesn't retain source characteristics
+- **Staggered Dumping**: Cache dumps are scheduled at different intervals for each instance, 
+  ensuring they **never dump at the same time** to avoid performance spikes and maintain 
+  consistent system responsiveness
+
+**Privacy & Telemetry Policy:**
+- **NON-NEGOTIABLE: ABSOLUTELY NO TELEMETRY** outside of localhost
+- All NoNano operations are **strictly local**
+- No data transmission to external servers - **EVER**
+- No analytics, metrics, or usage data leaves your machine
+- **User Policy Control**: Telemetry restrictions enforced by user-configurable policy
+- **Network Isolation**: NoNanos operate in network-isolated mode by default
+- Complete privacy: your data, your patterns, your machine only
+- **THIS IS A CORE PRINCIPLE** - not optional, not configurable to allow external telemetry
+- **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to
+- **NO DATA COLLECTION** without explicit user consent
+- **USER OWNS ALL DATA**: All learning patterns, cache data, and operational data belong to the user
+- Zero data collection by default - user must explicitly opt-in for any local data retention
+- **USERS CANNOT BE BULLIED OUT OF THEIR DATA**: No dark patterns, no forced consent, no 
+  "accept or the software won't work" tactics - the system works fully without any data collection
+- **NO COERCION**: Software operates at full functionality with zero data sharing
+- **TRUE CHOICE**: Users have genuine control, not manufactured consent
+- **USER'S TERMS**: Users can provide their data as they see fit - on their timeline, in their 
+  format, to parties of their choosing, with full control over what is shared and when
 
 ### 2. Kernel Bridge (`src/kernel_bridge/`)
 
@@ -223,6 +317,37 @@ This is community-driven. Contribute via:
 ## License
 
 See LICENSE file. This code is meant to be used, modified, and shared to help others.
+
+### Data Translation and Legal Boundaries
+
+**Important**: This project is designed with clear legal boundaries:
+
+- **No Proprietary Data Transfer**: Information is TRANSLATED, not transferred
+- **Clean Transformation**: Data passing between kernels is transformed through our 
+  original NoNano/NoNaos LLM layer and kernel bridge
+- **Original Expression**: The translation methodology is our creative expression
+- **Legal Compliance**: Once translated, data represents our implementation, not 
+  proprietary third-party information
+
+**Hardware Control Signals vs Data Transfer**:
+
+A critical distinction: Sending hardware control signals is NOT proprietary data transfer.
+
+- **Control Commands Are Standard**: Commands like "enable GPU", "disable GPU", or 
+  boolean control signals (on/off/execute) are standard operating practice across 
+  the industry:
+  * CUDA → NVIDIA drivers
+  * DirectX/Vulkan → GPU drivers
+  * TensorFlow → TPU/GPU drivers
+
+- **What Hardware Receives**: Only control commands, not your algorithms or business logic
+- **Analogy**: Like a light switch - flipping it doesn't reveal how the bulb works
+
+**What we're allowed to build**: We can build kernel compatibility layers as long 
+as NO proprietary data is directly transferred. Our translation layer ensures that 
+by the time information reaches the other kernel, it's been transformed into a 
+non-proprietary format through our original implementation. Sending control signals 
+to hardware is standard practice and does not constitute proprietary data transfer.
 
 ---
 

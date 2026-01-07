@@ -1,13 +1,133 @@
 # PROPRIETARY SOFTWARE LICENSE
 
-Copyright (c) 2026 James Hroop (jameshroop-art). All Rights Reserved.
+Copyright (c) 2026 James H Roop (jameshroop-art). All Rights Reserved.
+
+## EXPRESSION OF CREATIVE WORK
+
+This software embodies the **Expression** of James H Roop's original plan and 
+theory of implementation. The creative intellectual property protected herein 
+includes not only the executable code, but the conceptual framework, architectural 
+design, implementation methodology, and the theoretical foundation upon which 
+this system is built.
+
+**IMPORTANT NOTICE - NO PROPRIETARY INFORMATION USED**: 
+
+This work contains **NO** proprietary information from:
+- Microsoft Corporation (Windows, Windows APIs, Windows drivers)
+- Linux Foundation or Linux kernel developers
+- Debian Project
+- Parrot Security OS
+- Any hardware manufacturers
+- Any other third-party entities
+
+**EVERYTHING IS SIMULATED**: All functionality in this project is based on:
+- Simulated interfaces and behaviors
+- Publicly available documentation and specifications
+- Clean-room reverse engineering of publicly observable behavior
+- Original creative expression and theoretical implementation
+
+**FUTURE DEVELOPMENT**: All future tests, implementations, and development 
+will continue WITHOUT using any proprietary information from the above-mentioned 
+entities or any other third parties. This project will remain based solely on 
+simulation, public specifications, and original creative work.
+
+**DATA TRANSLATION AND KERNEL BOUNDARIES**: 
+
+This project's architecture is specifically designed to ensure NO proprietary 
+data is transferred between kernel boundaries:
+
+- **Translation Layer**: All data passing between kernel spaces is TRANSLATED 
+  through the NoNano/NoNaos LLM layer and kernel bridge
+- **Clean Transformation**: By the time information reaches the other kernel, 
+  it has been transformed into a new, non-proprietary format
+- **No Direct Transfer**: No proprietary data structures, formats, or information 
+  passes directly between kernels
+- **Original Expression**: The translation methodology and transformation logic 
+  are original creative expressions
+- **Legal Boundary**: Once data is translated/transformed, it represents our 
+  original implementation, not proprietary third-party information
+- **Cache Purging Security**: Each NoNano/NoNaos instance dumps cache at periodic 
+  intervals to prevent data leaks, with staggered scheduling so dumps never occur 
+  at the same time (avoiding performance spikes), ensuring no residual data from 
+  operations remains in memory that could potentially leak proprietary information
+
+**HARDWARE CONTROL VS DATA TRANSFER**:
+
+It is important to distinguish between hardware control signals and proprietary 
+data transfer:
+
+- **Control Signals Are NOT Proprietary**: Sending commands like "enable GPU", 
+  "disable GPU", or control signals (on/off/execute) does not transfer proprietary 
+  information. This is analogous to pressing a light switch - it doesn't reveal 
+  how the light bulb works.
+
+- **Standard Operating Practice**: This is exactly how every major system works:
+  * CUDA kernels send commands to NVIDIA drivers
+  * DirectX/Vulkan abstract game engines send draw commands
+  * TensorFlow sends compute signals to TPU/GPU drivers
+
+- **What Cannot Be Protected** (and thus cannot be violated):
+  * Hardware control signals
+  * Standard driver interfaces
+  * Boolean enable/disable flags
+  * Standard API calls
+
+- **What CAN Be Protected**:
+  * The algorithm that decides when to send those signals
+  * The data being processed
+  * The business logic
+
+The driver receiving control signals never sees your algorithm, your data, or 
+your business logic - only the control commands. Hardware control ≠ Data transfer.
+
+This approach ensures we can build kernel compatibility layers without 
+transferring or using proprietary information.
+
+The **Expression** encompasses:
+- The original concept and vision for cross-kernel driver compatibility
+- The theoretical framework for Windows-Linux driver bridging
+- The architectural design and implementation strategy
+- The novel methodologies and approaches developed herein
+- The integration patterns and technical solutions expressed in this work
+- The "NoNano" / "NoNaos" LLM terminology and implementation approach
+
+**LLM TERMINOLOGY**: The LLMs used in detailed implementation are referred to as 
+**"NoNano"** or **"NoNaos"**. In this context, LLM is used as a derivative of 
+"Language Learning Models" (rather than "Large Language Models") - a newly assigned 
+definition for the expressed purpose to fit in small places and learn to do tiny jobs:
+- "No" + "Nano" implies their small/nano size (~50KB per instance)
+- Refers to answers they apply during operation between "No" and "Yes"
+- Provides intelligent decision-making for request handling and routing
+- Designed to fit in small places and learn to do tiny, specialized jobs
+- **PURPOSE**: NoNanos work ON hardware balance and optimization, NOT data processing
+- **FUNCTION**: Hardware load balancing, request routing, and performance optimization only
+- **LOW-BUDGET PERFORMANCE**: Provides cost-effective processing power increase through 
+  intelligent resource management without requiring hardware upgrades
+- **PRIVACY (NON-NEGOTIABLE)**: Absolutely NO telemetry outside of localhost per user policy - 
+  all operations are strictly local with no external data transmission EVER, network isolation 
+  enforced by default, this is a core architectural principle not subject to configuration
+- **USER DATA SOVEREIGNTY**: No one should collect the data if the user doesn't want them to - 
+  no data collection without explicit user consent, user owns all data including learning 
+  patterns and operational data, zero data collection by default
+- **NO COERCION**: Users cannot be bullied out of their data - no dark patterns, no forced 
+  consent, no "accept or it won't work" tactics, software operates at full functionality 
+  with zero data sharing, true user choice not manufactured consent
+- **USER'S TERMS**: Users can provide their data as they see fit - on their timeline, in 
+  their format, to parties of their choosing, with full control over what is shared and when
+- Architecture incorporates approximately 500 NoNano/NoNaos instances for comprehensive 
+  driver and device coverage (~25MB total memory footprint for all LLMs)
+- Scale enables each instance to operate minimally and balance the system when under load
+- Each instance dumps cache at periodic intervals to prevent data leaks, with staggered 
+  scheduling ensuring dumps never occur at the same time (avoiding performance spikes 
+  while ensuring no residual data remains in memory that could potentially leak 
+  proprietary information)
 
 ## TERMS AND CONDITIONS
 
 ### 1. GRANT OF LICENSE
 
 This software and associated documentation files (the "Software") are the 
-proprietary property of James Hroop ("Author"). Access to this repository 
+proprietary property of James H Roop ("Author"). Access to this repository 
 does NOT grant any license or right to use, copy, modify, or distribute 
 the Software.
 
@@ -28,7 +148,7 @@ h) Use the Software in any way that violates applicable laws
 
 Use of this Software is ONLY permitted:
 
-a) By the Author (James Hroop)
+a) By the Author (James H Roop)
 b) By individuals or organizations explicitly authorized in writing by the Author
 c) For lawful purposes only
 d) With proper authorization for any security testing
@@ -160,7 +280,7 @@ UNDERSTOOD THIS LICENSE AND AGREE TO BE BOUND BY ITS TERMS.**
 ---
 
 **Project Start Date:** January 5, 2026  
-**Copyright Holder:** James Hroop (@jameshroop-art)  
-**License Version:** 1.0
+**Copyright Holder:** James H Roop (@jameshroop-art)  
+**License Version:** 1.1
 
 For questions about licensing, contact the repository owner.

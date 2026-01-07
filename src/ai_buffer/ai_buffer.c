@@ -1,11 +1,18 @@
 /*
  * ParrotWinKernel - AI Communication Buffer Implementation
  * 
- * Copyright (c) 2026 James Hroop. All Rights Reserved.
+ * Copyright (c) 2026 James H Roop. All Rights Reserved.
  * 
- * CREATIVE PROPERTY NOTICE:
- * This work, including its IMPLEMENTATION, ARCHITECTURE, DESIGN, and SOLUTION,
- * is the creative property and original intellectual work of James Hroop.
+ * EXPRESSION OF CREATIVE WORK:
+ * This work embodies the Expression of James H Roop's original plan and theory 
+ * of implementation. The creative intellectual property includes the IMPLEMENTATION, 
+ * ARCHITECTURE, DESIGN, and SOLUTION as the creative Expression of the plan and 
+ * theoretical framework.
+ * 
+ * NO PROPRIETARY INFORMATION USED: This work contains NO proprietary information 
+ * from Microsoft, Linux, Debian, Parrot, or any other entities. Everything is 
+ * SIMULATED based on publicly available specifications and original creative 
+ * expression. Future development will proceed without proprietary information.
  * 
  * While individual code segments may reference publicly available specifications
  * or reverse-engineered interfaces, the creative expression, methodology,
@@ -36,10 +43,16 @@
  * 
  * ---
  * 
- * AI Communication Buffer Implementation
+ * AI Communication Buffer Implementation ("NoNano" / "NoNaos" LLM)
  * 
- * Implements a tiny neural network for intelligent request handling
- * between Windows drivers and Linux kernel.
+ * Implements a tiny neural network (LLM - Language Learning Model) for 
+ * intelligent request handling between Windows drivers and Linux kernel.
+ * 
+ * The "NoNano" or "NoNaos" LLM operates between "No" and "Yes" decisions,
+ * providing intelligent answers during operation for request routing,
+ * optimization, and error handling. LLM here is used as a derivative of
+ * "Language Learning Models" - designed to fit in small places and learn
+ * to do tiny, specialized jobs.
  */
 
 #include "ai_buffer.h"
