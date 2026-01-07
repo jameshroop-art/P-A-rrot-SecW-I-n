@@ -1,0 +1,58 @@
+mode:
+  default: forensics
+  exploitation:
+    enabled: false  # Must be explicitly enabled
+    require_auth: true
+    require_legal_ack: true
+
+forensics:
+  default_depth: standard  # basic, standard, full, deep
+  aggressive_scanning: false
+  rate_limiting: true
+  max_concurrent_scans: 10
+  timeout_seconds: 30
+  
+exploitation:
+  ai_model: models/payload_gen_v1.onnx
+  max_iterations: 10
+  session_recording: true
+  whitelist_only: true
+  require_typed_confirmation: true
+
+safe_environments:
+  - hackthebox.com
+  - hackthebox.eu
+  - tryhackme.com
+  - pentesterlab.com
+  - vulnhub.com
+  - localhost
+  - 127.0.0.1
+  - "10.10.*.*"  # HTB VPN range
+
+integrations:
+  hackthebox:
+    api_token: ${HTB_API_TOKEN}
+    api_url: https://labs.hackthebox.com/api/v4
+  tryhackme:
+    api_token: ${THM_API_TOKEN}
+  shodan:
+    api_key: ${SHODAN_API_KEY}
+  haveibeenpwned:
+    api_key: ${HIBP_API_KEY}
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/forensicsense.log
+  audit_file: audit_logs/audit.log
+
+output:
+  default_format: text  # text, json, yaml
+  reports_dir: reports
+  evidence_dir: evidence
+  
+evidence:
+  hash_algorithm: sha256
+  seal_format: json
+  chain_of_custody: true
+  immutable: true
